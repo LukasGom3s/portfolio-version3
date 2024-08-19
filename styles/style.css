@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/* Importamos as fontes Krona One e Montserrat utilizadas na pagina. */
+
+:root{
+    --cor-principal: #FF9999;
+    --cor-secundaria: white ;
+    --cor-terciaria: black ;
+
+    --fonte-principal:"Krona One", sans-serif;
+    --fonte-secundaria:"Montserrat", sans-serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    box-sizing: border-box;
+    /* Utilizamos isso para os elementos filhos da tag body não sairem do elemento pai, ficando maiores que ele. */
+    /* height: 100vh; */
+    /* Fazemos que o body ocupe 100% da altura máxima da tela do navegador */
+    background-color: var(--cor-principal);
+    /* Altera a cor do fundo do nosso body. */
+    color: white;
+    /* Altera a cor da fonte contida na escrita do body */
+}
+
+.titulo-destacado {
+    color: black;
+}
+
+.apresentacao-conteudo {
+    display: flex;
+    /* Ativa a funcionalidade flex-box para alterarmos a disposição dos itens filhos no elemento pai. */
+    align-items: center;
+    /* Escolhemos como os elementos filhos serão alinhados no elemento pai. */
+    /* No caso do :center os elementos são alinhados em relação ao maior deles em altura */
+    justify-content: space-between;
+    /* Como num documento word, alteramos a justificação dos conteudos, sendo eles o elementos filhos. */
+    margin: 4% 12%;
+    /* Alteramos a margem em volta dos elementos filhos dentro do elemento pai, colocando-os mais ao meio */
+    gap:10%;
+}
+
+.apresentacao-conteudo-texto {
+    width: 50%;
+    /* Largura  do nosso elemento. */
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.apresentacao-conteudo-texto-titulo {
+    font-size: 2.25rem;
+    /* Alteramos o tamanho da fonte do elemento. */
+    font-family: var(--fonte-principal);
+    /* Seleciomos a fonte que utilizaremos */
+}
+
+.apresentacao-conteudo-texto-paragrafo {
+    font-size: 1.5rem;
+    /* Alteramos o tamanho da fonte do elemento. */
+    font-family: var(--fonte-secundaria);
+    /* Seleciomos a fonte que utilizaremos */
+}
+
+.links {
+    width: 100%;
+    display: flex;
+    /* Ativa a funcionalidade flex-box para alterarmos a disposição dos itens filhos no elemento pai. */
+    justify-content: space-between;
+    /* Como num documento word, alteramos a justificação dos conteudos, sendo eles o elementos filhos. */
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.links-botoes {
+    /* Alteramos a cor de fundo dos botoes */
+    width: 60%;
+    /* Alteramos a altura dos botoes. */
+    text-align: center;
+    /* Alteramos o alinhamento do texto. */
+    /* Alteramos o raio da borda do botão. */
+    font-size: 1.5rem;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    text-decoration: none;
+    color: var(--cor-secundaria);
+    font-family: var(--fonte-secundaria);
+    font-weight: 600;
+    border: 2.5px solid var(--cor-terciaria);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+.links-subtitulo {
+    font-family: var(--fonte-principal);
+    font-weight: 400;
+    font-size: 1.25rem;
+}
+
+.links-botoes:hover {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-terciaria);
+}
+
+.rodape {
+    color: var(--cor-secundaria);
+    background-color: var(--cor-terciaria);
+    text-align: center;
+    padding: 24px;
+    font-size: 1.5rem;
+    font-family: var(--fonte-secundaria);
+    font-weight: 400;
+}
+
+.header {
+    padding: 2% 0 0 12%;
+    display: flex;
+    gap: 80px;
+}
+
+.header-link {
+    font-family: var(--fonte-secundaria);
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: var(--cor-terciaria);
+    text-decoration: none;
+}
+
+.apresentacao-conteudo-sobremim {
+    display: flex;
+    /* Ativa a funcionalidade flex-box para alterarmos a disposição dos itens filhos no elemento pai. */
+    align-items: center;
+    /* Escolhemos como os elementos filhos serão alinhados no elemento pai. */
+    /* No caso do :center os elementos são alinhados em relação ao maior deles em altura */
+    justify-content: space-between;
+    /* Como num documento word, alteramos a justificação dos conteudos, sendo eles o elementos filhos. */
+    margin: 5% 8%;
+    /* Alteramos a margem em volta dos elementos filhos dentro do elemento pai, colocando-os mais ao meio */
+}
+
+.imagem{
+    width: 50%;
+}
+
+@media(max-width:1150px) {
+    .apresentacao-conteudo{
+      flex-direction: column-reverse;
+      gap: 50px;
+      padding:5%;
+    }
+    .apresentacao-conteudo-texto{
+        width: auto;
+    }
+    .apresentacao-conteudo-sobremim
+    {
+        flex-direction: column-reverse;
+        gap: 50px;
+    }
+    .header{
+        padding-top: 10%;
+        padding-left: 0%;
+        padding-right: 0%;
+        justify-content: center;
+    }
+    
+}
